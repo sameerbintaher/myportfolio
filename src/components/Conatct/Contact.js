@@ -1,177 +1,107 @@
-import React from "react";
-// import imageOverlay from "../img/earth.jpg";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 
-class Contact extends React.Component {
-  render() {
-    return (
-      <section
-        className="container px-5 paralax-mf footer-paralax bg-image sect-mt4 route"
-        // style={{ backgroundImage: "url(" + imageOverlay + ")" }}
-        style={{ height: "100vh", marginTop: "100px" }}
+export const ContactUs = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_kv8s00n",
+        "template_050zdba",
+        form.current,
+        "user_g0x4ln2bGqfdaRmujpQYq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
+  return (
+    <div
+      className="container p-md-5 p-2 mt-5"
+      style={{ height: "86vh" }}
+      id="contact"
+    >
+      <h1 className="purple mt-5">Contact with me</h1>
+      <p className="text-white">
+        I'm always here to learn from you. Whether you have a question or just
+        want to say hi, fell free to drop a message. I'll try my best to get
+        back to you!
+      </p>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="purple border-3 bg-dark shadow-lg p-md-3 p-2 rounded"
       >
-        <div className="overlay-mf"></div>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
-              <div className="contact-mf">
-                <div id="contact" className="box-shadow-full">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="title-box-2">
-                        <h5 className="text-white">Send A Message</h5>
-                      </div>
-                      <div>
-                        <form
-                          action="https://formspree.io/xdoeonlo"
-                          method="POST"
-                          className="contactForm"
-                        >
-                          <div id="sendmessage">
-                            Your message has been sent. Thank you!
-                          </div>
-                          <div id="errormessage"></div>
-                          <div className="row">
-                            <div className="col-md-12 mb-3">
-                              <div className="form-group">
-                                <input
-                                  type="text"
-                                  name="name"
-                                  className="form-control"
-                                  id="name"
-                                  placeholder="Your Name"
-                                  data-rule="minlen:4"
-                                  data-msg="Please enter at least 4 chars"
-                                />
-                                <div className="validation"></div>
-                              </div>
-                            </div>
-                            <div className="col-md-12 mb-3">
-                              <div className="form-group">
-                                <input
-                                  type="email"
-                                  className="form-control"
-                                  name="email"
-                                  id="email"
-                                  placeholder="Your Email"
-                                  data-rule="email"
-                                  data-msg="Please enter a valid email"
-                                />
-                                <div className="validation"></div>
-                              </div>
-                            </div>
-                            <div className="col-md-12 mb-3">
-                              <div className="form-group">
-                                <input
-                                  type="text"
-                                  className="form-control"
-                                  name="subject"
-                                  id="subject"
-                                  placeholder="Subject"
-                                  data-rule="minlen:4"
-                                  data-msg="Please enter at least 8 chars of subject"
-                                />
-                                <div className="validation"></div>
-                              </div>
-                            </div>
-                            <div className="col-md-12 mb-3">
-                              <div className="form-group">
-                                <textarea
-                                  className="form-control"
-                                  name="message"
-                                  rows="5"
-                                  data-rule="required"
-                                  data-msg="Please write something for us"
-                                  placeholder="Message"
-                                ></textarea>
-                                <div className="validation"></div>
-                              </div>
-                            </div>
-                            <div className="col-md-12">
-                              <button
-                                type="submit"
-                                className="button button-a button-big button-rouded"
-                              >
-                                Send Message
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="title-box-2 pt-4 pt-md-0">
-                        <h5 className=" text-white">Get in Touch</h5>
-                      </div>
-                      <div className="more-info">
-                        <p className=" text-white">
-                          Whether you want to get in touch, talk about a project
-                          collaboration, or just say hi, I'd love to hear from
-                          you.
-                          <br />
-                          Simply fill the from and send me an email.
-                        </p>
-                        {/* <!-- <ul class="list-ico">
-                                <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                                <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                                <li><span class="ion-email"></span> contact@example.com</li>
-                                </ul> --> */}
-                      </div>
-                      <div className="socials">
-                        <ul>
-                          <li>
-                            <a
-                              href=""
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="ico-circle">
-                                <i className="ion-social-codepen"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href=""
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="ico-circle">
-                                <i className="ion-social-github"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href=""
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="ico-circle">
-                                <i className="ion-social-linkedin"></i>
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer>
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12">
-                <div className="copyright-box"></div>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </section>
-    );
-  }
-}
-
-export default Contact;
+        <h5 style={{ textAlign: "left", marginBottom: "-20px" }}>Name</h5>
+        <br />
+        <input
+          type="text"
+          placeholder="Your name"
+          className="w-100 rounded"
+          name="name"
+        />
+        <br />
+        <h5
+          style={{
+            textAlign: "left",
+            marginBottom: "-20px",
+            marginTop: "15px",
+          }}
+        >
+          Email
+        </h5>
+        <br />
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          className="w-100 rounded"
+          name="user_email"
+        />
+        <br />
+        <h5
+          style={{
+            textAlign: "left",
+            marginBottom: "-20px",
+            marginTop: "15px",
+          }}
+        >
+          Subject
+        </h5>
+        <br />
+        <input
+          type="subject"
+          placeholder="Please provide your subject"
+          className="w-100 rounded"
+          name="subject"
+        />
+        <br />
+        <h5
+          style={{
+            textAlign: "left",
+            marginBottom: "-20px",
+            marginTop: "15px",
+          }}
+        >
+          Message
+        </h5>{" "}
+        <br />
+        <textarea
+          name="message"
+          placeholder="Your valuable message"
+          className="w-100 rounded"
+        />
+        <input type="submit" className="" value="Send" />
+      </form>
+    </div>
+  );
+};
