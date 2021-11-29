@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import { Button } from "react-bootstrap";
 
 export const ContactUs = () => {
   const form = useRef();
@@ -28,7 +29,11 @@ export const ContactUs = () => {
   return (
     <div
       className="container p-md-5 p-2 mt-5"
-      style={{ height: "86vh" }}
+      style={{
+        height: "90vh",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
       id="contact"
     >
       <h1 className="purple mt-5">Contact with me</h1>
@@ -40,7 +45,7 @@ export const ContactUs = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="purple border-3 bg-dark shadow-lg p-md-3 p-2 rounded"
+        className="purple border-3 shadow-lg px-md-5 py-md-3 p-2 rounded"
       >
         <h5 style={{ textAlign: "left", marginBottom: "-20px" }}>Name</h5>
         <br />
@@ -100,7 +105,9 @@ export const ContactUs = () => {
           placeholder="Your valuable message"
           className="w-100 rounded"
         />
-        <input type="submit" className="" value="Send" />
+        <Button type="submit" className="rounded mt-2">
+          Submit
+        </Button>
       </form>
     </div>
   );

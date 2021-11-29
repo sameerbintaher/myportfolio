@@ -20,6 +20,9 @@ function ResumeNew() {
           </Button>
         </Row>
       </Container>
+      <h5 className="text-warning">
+        Working on it. Details are coming soon...
+      </h5>
     </div>
   );
 }

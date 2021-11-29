@@ -18,6 +18,7 @@ import "./Slider.css";
 // import Swiper core and required modules
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
 import { Link } from "react-router-dom";
+import Particle from "../Particle";
 
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Pagination]);
@@ -79,11 +80,12 @@ export default function Slider() {
   return (
     <div style={{ backgroundColor: "#000" }}>
       <div className="container pt-5 d-flex">
+        <Particle />
         <h3 className="text-white" id="works">
           <span>{"<"}Projects</span>
           {">"}
         </h3>
-        <Button id="button-outline" as={Link} to="/projects">
+        <Button id="button-outline" as={Link} to="/project">
           All projects
         </Button>
       </div>

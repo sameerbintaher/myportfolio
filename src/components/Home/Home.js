@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Button, Nav } from "react-bootstrap";
-import { AiOutlineDownload } from "react-icons/ai";
+import React from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import homeLogo from "../../Assets/home-main.svg";
 import { ContactUs } from "../Conatct/Contact";
 import Particle from "../Particle";
 import Slider from "../Slider/Slider";
 import Home2 from "./Home2";
 import Type from "./Type";
-import pdf from "../../Assets/resume.pdf";
-import { CgFileDocument } from "react-icons/cg";
-import { Link } from "react-router-dom";
 
 function Home() {
-  const [expand, updateExpanded] = useState(false);
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <Container
+        fluid
+        className="home-section"
+        id="home"
+        style={{ height: "90vh" }}
+      >
         <Particle />
         <Container className="home-content">
           <Row>
@@ -38,22 +39,25 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img src={homeLogo} alt="home pic" className="img-fluid" />
+              <img
+                src={homeLogo}
+                alt="home pic"
+                className="img-fluid mt-md-0 mt-5 mb-5"
+              />
             </Col>
           </Row>
         </Container>
-        <Nav.Item>
-          <Nav.Link
-            as={Link}
-            to="/resume"
-            onClick={() => updateExpanded(false)}
-          >
-            <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-          </Nav.Link>
-        </Nav.Item>
       </Container>
+      <a
+        href="https://drive.google.com/file/d/1HcvH01K7tRljm1bgoB-uQcAd1EnygAVK/view"
+        className="nav-link active text-white mb-5"
+        target="blank"
+      >
+        <Button id="button-outline"> My Resume </Button>
+      </a>
       <Home2 />
       <Slider />
+
       <ContactUs />
     </section>
   );

@@ -12,9 +12,9 @@ import Toolstack from "../About/Toolstack";
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
-      <Container>
+      <Container className="mt-5 mt-md-0">
         <Row>
-          <Col md={12} className="home-about-description">
+          <Col md={12} className="home-about-description mt-md-0 mt-5">
             <h1 style={{ fontSize: "2.6em" }}>
               Let Me <span className="purple"> Introduce </span> My Skills
             </h1>
