@@ -3,7 +3,6 @@ import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./style.css";
@@ -13,6 +12,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./components/ScrollToTop";
 import { ContactUs } from "./components/Conatct/Contact";
 import ResumeNew from "./components/Resume/ResumeNew";
+import Blogs from "./components/Blogs/Blogs";
+import allslider from "./components/Slider/allslider";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -33,9 +34,10 @@ function App() {
         <ScrollToTop />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/project" component={Projects} />
           <Route path="/about" component={About} />
+          <Route path="/project" component={allslider} />
           <Route path="/resume" component={ResumeNew} />
+          <Route path="/blogs" component={Blogs} />
           <Route path="/contact" component={ContactUs} />
         </Switch>
         <Footer />

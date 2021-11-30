@@ -1,17 +1,17 @@
 html {
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
+    rgba(0, 7, 3, 0.582),
+    rgba(11, 87, 158, 0.904)
   );
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    rgba(0, 0, 0, 0.678),
+    rgba(62, 42, 167, 0.863)
   );
 
-  --imp-text-color: #c770f0;
+  --imp-text-color: #00d853;
 }
 
 .purple {
@@ -94,7 +94,7 @@ html {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: #507cf4 !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;

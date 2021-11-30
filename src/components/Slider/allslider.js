@@ -8,6 +8,7 @@ import "swiper/components/pagination/pagination.min.css";
 import motors from "../../Assets/motors.jpg";
 import hospital from "../../Assets/hospital.jpg";
 import travel from "../../Assets/travel.jpg";
+import education from "../../Assets/education.jpg";
 import "./Slider.css";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,8 +22,8 @@ import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Pagination]);
 
-export default function Slider() {
-  const pdData = [
+export default function allslider() {
+  const Data = [
     {
       id: 1,
       title: "Sam Motors - Your trusted shop",
@@ -73,13 +74,29 @@ export default function Slider() {
       link: "https://github.com/sameerbintaher/sam-hospital",
       live: "https://samhospital.netlify.app/",
     },
+    {
+      id: 4,
+      title: "SamPro Consultant",
+      image: education,
+      description:
+        "A modern hospital website for various patients Patients can choose doctor according to their problem Patients can view doctor details and make an appointment. Patients can cancel their appointments.",
+      technology: [
+        "ReactJS",
+        "React Hook",
+        "React-Bootstrap",
+        "React Router",
+        "Custom CSS",
+      ],
+      link: "https://github.com/sameerbintaher/education-sameer",
+      live: "https://education-sameer.netlify.app/",
+    },
   ];
 
   return (
     <div className="mt-5" style={{ backgroundColor: "#000" }}>
       <div className="container pt-5 d-flex justify-content-center align-items-center">
         <h3 className="purple" id="works">
-          <span>{"<"} Highlighted Projects</span>
+          <span>{"<"} Explore my all projects</span>
           {">"}
         </h3>
         {/* <Button id="button-outline" as={Link} to="/project">
@@ -102,7 +119,7 @@ export default function Slider() {
         pagination={true}
         className="mySwiper"
       >
-        {pdData.map((pd) => (
+        {Data.map((pd) => (
           <SwiperSlide>
             <div style={{ backgroundColor: "#222222" }} className="">
               <div className="">

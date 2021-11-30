@@ -56,7 +56,11 @@ function Home() {
         <Button id="button-outline"> My Resume </Button>
       </a>
       <Home2 />
+
       <Slider />
+      <Link to="/project">
+        <Button>Explore All Project</Button>
+      </Link>
 
       <ContactUs />
     </section>
