@@ -7,6 +7,7 @@ import Particle from "../Particle";
 import Slider from "../Slider/Slider";
 import Home2 from "./Home2";
 import Type from "./Type";
+import "./home.css";
 
 function Home() {
   return (
@@ -48,19 +49,29 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <a
-        href="https://drive.google.com/file/d/1HcvH01K7tRljm1bgoB-uQcAd1EnygAVK/view"
-        className="nav-link active text-white mb-5"
-        target="blank"
-      >
-        <Button id="button-outline"> My Resume </Button>
-      </a>
+
+      <Container>
+        <div className="d-flex justify-content-center align-items-center resume">
+          <a
+            href="https://drive.google.com/file/d/1HcvH01K7tRljm1bgoB-uQcAd1EnygAVK/view"
+            className="nav-link active text-white mb-5"
+            target="blank"
+          >
+            <Button id="button-outline"> My Resume </Button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sameerbintaher/"
+            className="nav-link active text-white mb-5"
+            target="blank"
+          >
+            <Button id="button-outline"> Hire Me </Button>
+          </a>
+        </div>
+      </Container>
+
       <Home2 />
 
       <Slider />
-      <Link to="/project">
-        <Button>Explore All Project</Button>
-      </Link>
 
       <ContactUs />
     </section>

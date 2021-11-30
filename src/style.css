@@ -1,17 +1,17 @@
 html {
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(0, 7, 3, 0.582),
-    rgba(11, 87, 158, 0.904)
+    rgba(17, 16, 16, 0.582),
+    rgba(12, 8, 24, 0.904)
   );
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(0, 0, 0, 0.678),
-    rgba(62, 42, 167, 0.863)
+    rgba(17, 16, 16, 0.678),
+    rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: #00d853;
+  --imp-text-color: #c770f0;
 }
 
 .purple {
@@ -72,7 +72,7 @@ html {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #212038d8 !important;
+  background-color: #000000d8 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
@@ -83,6 +83,7 @@ html {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
+  background-color: #0800008c !important;
 }
 
 .navbar-toggler {
@@ -94,7 +95,7 @@ html {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #507cf4 !important;
+  background-color: #be50f4 !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;

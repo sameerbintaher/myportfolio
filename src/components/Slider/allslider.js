@@ -99,10 +99,12 @@ export default function allslider() {
           <span>{"<"} Explore my all projects</span>
           {">"}
         </h3>
+
         {/* <Button id="button-outline" as={Link} to="/project">
           All projects
         </Button> */}
       </div>
+      <p className="text-white text-muted">Slide from right to left</p>
 
       <Swiper
         effect={"coverflow"}
