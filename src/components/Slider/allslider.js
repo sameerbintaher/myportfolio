@@ -9,6 +9,8 @@ import motors from "../../Assets/motors.jpg";
 import hospital from "../../Assets/hospital.jpg";
 import travel from "../../Assets/travel.jpg";
 import education from "../../Assets/education.jpg";
+import industry from "../../Assets/industry.jpg";
+import book from "../../Assets/book.jpg";
 import "./Slider.css";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -79,7 +81,7 @@ export default function allslider() {
       title: "SamPro Consultant",
       image: education,
       description:
-        "A modern hospital website for various patients Patients can choose doctor according to their problem Patients can view doctor details and make an appointment. Patients can cancel their appointments.",
+        "You will find the education and business service. You can apply best university worldwide by discussing with consultant and  start your business by taking great advise from consultant. You can develope your programming and graphic knowledge by taking any course from this website. This is Completely responsive for mobile devices",
       technology: [
         "ReactJS",
         "React Hook",
@@ -89,6 +91,26 @@ export default function allslider() {
       ],
       link: "https://github.com/sameerbintaher/education-sameer",
       live: "https://education-sameer.netlify.app/",
+    },
+    {
+      id: 5,
+      title: "SamPro Film and Music Industry",
+      image: industry,
+      description:
+        "This project was Completely made with React Js. I was excited while making this project. Here you will find relevant description of Indian Musician, Actor and Actress. You will find their demand for working with your industry You can make a wishlist by selecting artist for next dream show. You will get their most asking information from here.",
+      technology: ["ReactJS", "React-Bootstrap", "Custom CSS"],
+      link: "https://github.com/sameerbintaher/industry-sameer",
+      live: "https://industry-sameer.netlify.app/",
+    },
+    {
+      id: 6,
+      title: "Sam Book House",
+      image: book,
+      description:
+        "This is an API based based website here I used an API where located thousand of books info. You can search any kind of book here.",
+      technology: ["HTML5", "Bootstrap5", "CSS3", "javascript", "DOM", "API"],
+      link: "https://github.com/sameerbintaher/bookarchive-sameer",
+      live: "https://bookarchive-sameer.netlify.app/",
     },
   ];
 

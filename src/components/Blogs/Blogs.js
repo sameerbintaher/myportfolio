@@ -7,7 +7,7 @@ const Blogs = () => {
         className="text-warning d-flex justify-content-center align-items-center"
         style={{ height: "90vh" }}
       >
-        Awesome blogs coming soon ...
+        Awesome blogs are coming soon ...
       </h1>
     </div>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import homeLogo from "../../Assets/home-main.svg";
 import { ContactUs } from "../Conatct/Contact";
 import Particle from "../Particle";

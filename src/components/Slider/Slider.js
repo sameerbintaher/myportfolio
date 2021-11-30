@@ -17,6 +17,7 @@ import "./Slider.css";
 
 // import Swiper core and required modules
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
+import { Link } from "react-router-dom";
 
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Pagination]);
@@ -153,6 +154,9 @@ export default function Slider() {
             </div>
           </SwiperSlide>
         ))}
+        <Link to="/project">
+          <Button className="mt-3">Explore all projects</Button>
+        </Link>
       </Swiper>
     </div>
   );
