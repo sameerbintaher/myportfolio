@@ -14,6 +14,7 @@ function About() {
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
+            data-aos="fade-right"
             md={7}
             style={{
               justifyContent: "center",
@@ -32,6 +33,7 @@ function About() {
             className="about-img"
           >
             <img
+              data-aos="fade-left"
               style={{ borderRadius: "50%" }}
               src={aboutImg}
               alt="about"

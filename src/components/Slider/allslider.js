@@ -115,7 +115,11 @@ export default function allslider() {
   ];
 
   return (
-    <div className="mt-5" style={{ backgroundColor: "#000" }}>
+    <div
+      data-aos="fade-left"
+      className="mt-5"
+      style={{ backgroundColor: "#000" }}
+    >
       <div className="container pt-5 d-flex justify-content-center align-items-center">
         <h3 className="purple" id="works">
           <span>{"<"} Explore my all projects</span>

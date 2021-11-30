@@ -13,7 +13,7 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container className="mt-5 mt-md-0">
-        <Row>
+        <Row data-aos="zoom-in">
           <Col md={12} className="home-about-description mt-md-0 mt-5">
             <h1 style={{ fontSize: "2.6em" }}>
               Let Me <span className="purple"> Introduce </span> My Skills
@@ -24,13 +24,13 @@ function Home2() {
               I am <span className="purple">fluent</span> in
             </h1>
             <Techstack />
-            <h1>
+            <h1 data-aos="flip-right">
               <span className="purple">Tools</span> I use most
             </h1>
             <Toolstack />
             <br />
             <br />
-            <h4>
+            <h4 data-aos="zoom-in">
               My field of Interest's are building new &nbsp;
               <i>
                 <b className="purple">Web Technologies and Products</b>
@@ -51,7 +51,7 @@ function Home2() {
             </h4>
           </Col>
         </Row>
-        <Row>
+        <Row data-aos="zoom-in">
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <p>

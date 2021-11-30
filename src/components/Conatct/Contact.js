@@ -28,6 +28,7 @@ export const ContactUs = () => {
 
   return (
     <div
+      data-aos="zoom-in-right"
       className="container p-md-5 p-2 mt-5"
       style={{
         height: "90vh",
